@@ -1,0 +1,129 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap'); 
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App{
+width: 100%;
+height: 100vh;
+/* display: flex;
+justify-content: center;
+align-items: center; */
+background: url("../assets/bg1.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.overlay{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.8);
+
+}
+
+.box{
+  background: url("../assets/boxBg.jpg");
+
+    display: flex;
+   width: 30%;
+min-height: 250px;
+   max-height: fit-content;
+ flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 1rem;
+  position: relative;
+   overflow: hidden;
+   border-radius: 20px;
+}
+
+.box::before{
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 350%;
+  background: linear-gradient(rgb(107, 104, 50), #d41500 );
+ animation: animate 4s linear infinite;
+}
+
+.box::after{
+  content: '';
+  position: absolute;
+  inset: 5px;
+  background: url("../assets/boxBg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes animate{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.heading{
+ margin: 1rem;
+  position: relative;
+  z-index: 10;
+  margin-top: 1rem;
+
+}
+
+.author{
+  font-size: 3rem;
+  position: relative;
+  z-index: 10;
+  font-family: "Caveat", cursive;
+}
+
+.btn{
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 1px 5px 5px darkkhaki;
+  background-color: rgb(245, 181, 99);
+  transition: 0.3s;
+}
+
+.btn:hover{
+background-color: darkkhaki;
+box-shadow: 5px 5px 2px  rgb(245, 181, 99);
+}
+
+@media (min-width: 600px){
+  .box{
+    width: 50%;
+  
+  }
+
+  .heading{
+    font-size: 2.5rem;
+  }
+  .author{
+    font-size: 5rem;
+  }
+  .btn{
+    font-size: 2rem;
+  }
+}
