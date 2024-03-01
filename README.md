@@ -1,3 +1,9 @@
+
+
+
+https://github.com/VinitaIsrani74/Quote-generator-/assets/138797388/e28baf97-09f2-443c-8cae-29abf7234cc0
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
